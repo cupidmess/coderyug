@@ -2267,6 +2267,52 @@
       id="elementskit-elementor-pro-js"
     ></script>
     <script src="https://demo.awaikenthemes.com/assets/js/theme-panel.js"></script>
-  </body>
+  <!-- Floating WhatsApp Icon -->
+<div id="whatsapp-float">
+  <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp">
+</div>
+
+<style>
+  #whatsapp-float {
+    position: fixed;
+    bottom: 80px;
+    right: 23px;
+    width: 70px;
+    height: 70px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 9999;
+    animation: bounce 1.8s infinite;
+  }
+
+  #whatsapp-float img {
+    width: 40px;
+    height: 40px;
+  }
+
+  @keyframes bounce {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+</style>
+
+<script>
+  document.getElementById('whatsapp-float').addEventListener('click', function () {
+    window.open('https://wa.me/9890368409?text=Hello%20there!%20I%20need%20some%20help.', '_blank');
+  });
+</script>
+</body>
 
 </html>
