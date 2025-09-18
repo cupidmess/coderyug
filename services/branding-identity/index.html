@@ -1164,22 +1164,162 @@
                 data-widget_type="button.default"
               >
                 <div class="elementor-widget-container">
-                  <div class="elementor-button-wrapper">
-                    <a
-                      class="elementor-button elementor-button-link elementor-size-sm"
-                      href="../../contact-us/index.html"
-                    >
-                      <span class="elementor-button-content-wrapper">
-                        <span class="elementor-button-icon">
-                          <i aria-hidden="true" class="fas fa-arrow-right"></i>
-                        </span>
-                        <span class="elementor-button-text">
-                          Grow With Us</span
-                        >
-                      </span>
-                    </a>
-                  </div>
-                </div>
+  <div class="elementor-button-wrapper">
+    <a
+      id="freeAuditBtn"
+      class="elementor-button elementor-button-link elementor-size-sm"
+      href="javascript:void(0);"
+    >
+      <span class="elementor-button-content-wrapper">
+        <span class="elementor-button-icon">
+          <i aria-hidden="true" class="fas fa-arrow-right"></i>
+        </span>
+        <span class="elementor-button-text">Free Audit</span>
+      </span>
+    </a>
+  </div>
+</div>
+
+<!-- Popup Modal -->
+<div id="popupOverlay" class="popup-overlay">
+  <div class="popup">
+    <span id="closePopup" class="close">&times;</span>
+    <h2>Get Your Free Audit</h2>
+    <form id="auditForm">
+      <input type="text" id="companyInput" placeholder="Company Name" required />
+      <input type="text" id="emailInput" placeholder="Email" required />
+      <input type="text" id="phoneInput" placeholder="Phone Number" required />
+      <input type="text" id="websiteInput" placeholder="Website" required />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="responseMsg" style="margin-top:10px;font-size:14px;"></p>
+  </div>
+</div>
+
+<style>
+  /* Overlay */
+  .popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Popup box */
+  .popup {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .popup h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  .popup input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .popup button {
+    background: #00a5c8;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .popup button:hover {
+    background: #005bb5;
+  }
+
+  /* Close button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  const freeAuditBtn = document.getElementById("freeAuditBtn");
+  const popupOverlay = document.getElementById("popupOverlay");
+  const closePopup = document.getElementById("closePopup");
+  const auditForm = document.getElementById("auditForm");
+  const responseMsg = document.getElementById("responseMsg");
+
+  // Open popup
+  freeAuditBtn.addEventListener("click", () => {
+    popupOverlay.style.display = "flex";
+  });
+
+  // Close popup
+  closePopup.addEventListener("click", () => {
+    popupOverlay.style.display = "none";
+  });
+
+  // Close if clicking outside
+  window.addEventListener("click", (e) => {
+    if (e.target === popupOverlay) {
+      popupOverlay.style.display = "none";
+    }
+  });
+
+  // Handle form submit
+  auditForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const company = document.getElementById("companyInput").value;
+    const email = document.getElementById("emailInput").value;
+    const phone = document.getElementById("phoneInput").value;
+    const website = document.getElementById("websiteInput").value;
+
+    responseMsg.textContent = "Submitting...";
+    responseMsg.style.color = "#333";
+
+    try {
+  await fetch(
+    "https://script.google.com/macros/s/AKfycbwToluOJEXAJZFylBNidq7QrzkUqkTOB8xgjvMW7frFTjJ7Ugw655iBpvRZtLrebFsWqg/exec",
+    {
+      method: "POST",
+      mode: "no-cors",  // 👈 IMPORTANT
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ company, email, phone, website }),
+    }
+  );
+
+  // Since we can't read the response in no-cors mode,
+  // assume it's successful if no fetch error occurred
+  responseMsg.textContent = "✅ Thanks! We'll contact you soon.";
+  responseMsg.style.color = "green";
+  auditForm.reset();
+} catch (error) {
+  responseMsg.textContent = "⚠️ Network error. Please try later.";
+  responseMsg.style.color = "red";
+  console.error(error);
+}
+
+  });
+</script>
               </div>
             </div>
           </div>
