@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cupidmess.github.io/coderyug-sitemap
+Sitemap: https://coderyug.vercel.app/sitemap.xml
