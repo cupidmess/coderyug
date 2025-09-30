@@ -6,6 +6,92 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
+<url>
+  <loc>https://coderyug.vercel.app/</loc>
+  <lastmod>2025-09-30T20:05:19+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/index.html</loc>
+  <lastmod>2025-09-30T20:05:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/about-us/index.html</loc>
+  <lastmod>2025-09-30T20:05:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/services/index.html</loc>
+  <lastmod>2025-09-30T20:05:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/services/web-development/index.html</loc>
+  <lastmod>2025-09-30T20:05:21+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/services/digital-marketing/index.html</loc>
+  <lastmod>2025-09-30T20:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/services/branding-identity/index.html</loc>
+  <lastmod>2025-09-30T20:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/services/ui-ux-design/index.html</loc>
+  <lastmod>2025-09-30T20:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/services/custom-ai-solutions/index.html</loc>
+  <lastmod>2025-09-30T20:05:22+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/portfolios/index.html</loc>
+  <lastmod>2025-09-30T20:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/portfolio/consennse/index.html</loc>
+  <lastmod>2025-09-30T20:05:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/portfolio/global-copper-scraps/index.html</loc>
+  <lastmod>2025-09-30T20:05:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/portfolio/infinity-fleet-solutions/index.html</loc>
+  <lastmod>2025-09-30T20:05:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/portfolio/vighnesh-farm/index.html</loc>
+  <lastmod>2025-09-30T20:05:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/portfolio/royal-fitness-management/index.html</loc>
+  <lastmod>2025-09-30T20:05:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/portfolio/ecofusion/index.html</loc>
+  <lastmod>2025-09-30T20:05:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://coderyug.vercel.app/blog/index.html</loc>
+  <lastmod>2025-09-30T20:05:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 <url>
   <loc>https://coderyug.vercel.app/contact-us/index.html</loc>
   <lastmod>2025-09-30T20:05:25+00:00</lastmod>
